@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+ul {
+    list-style: none;
+}
+.loading {
+    text-align: center;
+}
+.element {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 430px;
+}
+.app {
+    background-color: #001514;
+    min-height: 100vh;
+    height: 100%;
+    padding-bottom: 40px;
+}
+.heading,
+.color {
+    font-size: 0.75rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 5px;
+}
+.color {
+    color: #00423f;
+    font-size: 1.25rem;
+}
+.confetti > * {
+    inset: 0px 30% !important;
+}
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*::-webkit-scrollbar-track {
+    background: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.219);
+    border-radius: 20px;
+    max-width: 10px;
+}
+.header {
+    padding: 0;
+}
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    max-width: 1500px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header__container__brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2rem;
+    margin: auto 0;
+    color: #ff1053;
 }
 
-.App-link {
-  color: #61dafb;
+.header__container__icon {
+    font-size: 1rem;
+    padding: 6px;
+    border-bottom: 1px #fff solid;
+    color: #fff;
+}
+.header__container__input {
+    outline: none;
+    border: none;
+    border-bottom: 1px #fff solid;
+    background: none;
+    color: #fff;
+    padding: 5px 5px;
+}
+.header__movielist,
+.nominated {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0 20px;
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card,
+.nominatedcard {
+    margin: 0;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    height: 100%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.466);
+    transform: scale(0.9);
+    transition: 200ms;
+}
+.nominatedcard {
+    padding: 0;
+}
+.card:hover,
+.nominatedcard:hover {
+    transform: scale(1);
+    background-color: rgba(255, 255, 255, 0.788);
+}
+.card__pic {
+    height: 300px;
+    width: 200px;
+    min-height: 300px;
+}
+.card__empty {
+    height: 270px;
+    width: 180px;
+    background-color: rgba(255, 255, 255, 0.048);
+}
+.card__info {
+    padding: 2px 5px;
+    width: 100%;
+    height: 100%;
+}
+.card__info__title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.card__info__year {
+    margin: 0;
+    padding: 0;
+}
+.card__controls {
+    width: 100%;
+}
+.btn {
+    margin: 0;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #077187;
+    padding: 5px 0;
+    color: #fff;
+}
+.btn:hover {
+    color: #fff;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 20px;
+}
+@media screen and (max-width: 350px) {
+    .header__container__brand {
+        font-size: 1.5rem;
+    }
+    .header__container__input {
+        width: 140px;
+    }
 }

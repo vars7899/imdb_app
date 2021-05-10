@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { GlobalProvider } from "./context/GlobalState";
+import Header from "./components/Header/Header";
+import Nominated from "./components/Nominated/Nominated";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <GlobalProvider>
+            <div className="app">
+                <Header />
+                <Nominated />
+            </div>
+        </GlobalProvider>
+    );
 }
+// }
 
 export default App;
